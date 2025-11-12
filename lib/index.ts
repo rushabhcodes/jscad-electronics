@@ -45,7 +45,7 @@ export * from "./MINIMELF"
 export * from "./MELF"
 
 export * from "./MicroMELF"
-
+export * from "./TO92S"
 export * from "./hc49"
 export * from "./ms012"
 export * from "./TO220"
