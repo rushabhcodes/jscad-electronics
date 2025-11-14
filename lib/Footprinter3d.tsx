@@ -28,6 +28,8 @@ import { SMC } from "./SMC"
 import { SMF } from "./SMF"
 import { SOD123F } from "./sod-123F"
 import { SOD123FL } from "./sod-123FL"
+import { SOD123W } from "./sod-123W"
+import { SOD128 } from "./sod-128"
 import { SOD923 } from "./SOD-923"
 import { SOT223 } from "./SOT-223"
 import TQFP from "./tqfp"
@@ -238,6 +240,10 @@ export const Footprinter3d = ({ footprint }: { footprint: string }) => {
       return <SOD123F />
     case "sod123fl":
       return <SOD123FL />
+    case "sod123w":
+      return <SOD123W />
+    case "sod128":
+      return <SOD128 />
     case "sod923":
       return <SOD923 />
     case "hc49":
