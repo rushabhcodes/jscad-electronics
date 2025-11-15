@@ -42,10 +42,13 @@ import { MicroMELF } from "./MicroMELF"
 import { MINIMELF } from "./MINIMELF"
 import { MELF } from "./MELF"
 import { MS012 } from "./ms012"
+import { MS013 } from "./ms013"
 import { TO220 } from "./TO220"
 import { SOT457 } from "./SOT-457"
 import { TO92 } from "./TO92"
 import SOT363 from "./SOT-363"
+import { SOD323 } from "./sod-323"
+import { SOD323F } from "./sod-323F"
 
 /**
  * Outputs a 3d model for any [footprinter string](https://github.com/tscircuit/footprinter)
@@ -204,6 +207,8 @@ export const Footprinter3d = ({ footprint }: { footprint: string }) => {
       return <SOT23W />
     case "sot323":
       return <SOT323 />
+    case "sod323f":
+      return <SOD323F />
     case "sot363":
       return <SOT363 />
     case "pushbutton":
@@ -244,6 +249,8 @@ export const Footprinter3d = ({ footprint }: { footprint: string }) => {
       return <SOD123W />
     case "sod128":
       return <SOD128 />
+    case "sod323":
+      return <SOD323 />
     case "sod923":
       return <SOD923 />
     case "hc49":
@@ -257,6 +264,15 @@ export const Footprinter3d = ({ footprint }: { footprint: string }) => {
     case "ms012":
       return (
         <MS012
+          pinCount={fpJson.num_pins}
+          padContactLength={fpJson.pl}
+          leadWidth={fpJson.pw}
+          pitch={fpJson.p}
+        />
+      )
+    case "ms013":
+      return (
+        <MS013
           pinCount={fpJson.num_pins}
           padContactLength={fpJson.pl}
           leadWidth={fpJson.pw}
